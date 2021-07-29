@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schedule Interview</title>
+</head>
+<body>
+    <main>
+        <form class="product-form" action="/save" method="POST">
+            <div class="form-control">
+                <label for="email">Input email id:</label>
+                <input type="text" name="email" id="email"></br>
+				<label for="start">Choose Start time:</label>
+				<input type="datetime-local" id="start" name="start"></br>
+				<label for="end">Choose End time:</label>
+				<input type="datetime-local" id="end" name="end">
+            </div>
+            <button type="submit">Schedule Interview</button>
+        </form>
+    </main>
+</body>
+
+</html>

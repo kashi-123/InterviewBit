@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schedule Interview</title>
+</head>
+<body>
+    <main>
+        <div>
+			Interview is scheduled for <%= schedule.email %>!
+			from <%= schedule.start %> to <%= schedule.end %>
+		</div>
+		<form class="product-form" action="/delete" method="POST">
+            <div class="form-control">
+                <input type="hidden" name="email" id="email" value="<%= schedule.email %>" ></br>
+            </div>
+            <button type="submit">Delete Interview</button>
+        </form>
+		<form class="product-form" action="/edit" method="POST">
+            <div class="form-control">
+                <input type="hidden" name="email" id="email" value="<%= schedule.email %>"></br>
+				<label for="start">Choose Start time:</label>
+				<input type="datetime-local" id="start" name="start" value="<%= schedule.start %>"></br>
+				<label for="end">Choose End time:</label>
+				<input type="datetime-local" id="end" name="end" value="<%= schedule.end %>">
+            </div>
+            <button type="submit">Edit Interview</button>
+        </form>
+    </main>
+</body>
+
+</html>
